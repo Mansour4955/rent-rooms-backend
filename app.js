@@ -7,6 +7,7 @@ app.use(express.json());
 
 connectToDB()
 
+// process.env.NODE_ENV production, development
 
 app.use("/api/cards", require("./routes/cards"))
 
