@@ -11,6 +11,11 @@ const {
  * @method Get
  * @access public
  */
+
+// const query = JSON.parse(`{${!!minPrice ? {  price: { $gte: minPrice } } : {}}, 
+// ${!!minPrice ? {  price: { $gte: minPrice } } : {}}, 
+// ${!!minPrice ? {  price: { $gte: minPrice } } : {}}, 
+// ${!!minPrice ? {  price: { $gte: minPrice } } : {}}}`) 
 module.exports.getAllCards = asyncHandler(async (req, res) => {
   const { category, country, minPrice, maxPrice } = req.query;
   if (country && !category && !minPrice && !maxPrice) {

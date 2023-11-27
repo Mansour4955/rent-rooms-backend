@@ -14,7 +14,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app"
+    "start": "nodemon app",
+    "vercel-build": "echo hello"
   },
   "author": "Mansour Amine",
   "license": "ISC",
