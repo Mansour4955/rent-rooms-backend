@@ -33,7 +33,7 @@ const CardSchema = new mongoose.Schema(
       enum: ["Apartment", "Villa", "House", "Hotel", "Riad"],
     },
     image: {
-      type: String,
+      type: Array,
       required: true,
     },
   },
@@ -49,7 +49,7 @@ function validateCreateCard(obj) {
     category: Joi.string()
       .valid("Apartment", "Villa", "House", "Hotel", "Riad")
       .required(),
-    image: Joi.string().required(),
+    image: Joi.array().required(),
   });
   return schema.validate(obj);
 }
@@ -67,7 +67,7 @@ function validateUpdateCard(obj) {
       "Hotel",
       "Riad"
     ),
-    image: Joi.string(),
+    image: Joi.array(),
   });
   return schema.validate(obj);
 }

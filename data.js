@@ -5,8 +5,7 @@ const cards = [
     price: "50",
     country: "Morocco",
     category: "Villa",
-    image:
-      "https://images.adsttc.com/media/images/5f58/34e6/b357/6580/c200/035a/slideshow/00FI_IMG_0353-1.jpg",
+    image: ["https://images.adsttc.com/media/images/5f58/34e6/b357/6580/c200/035a/slideshow/00FI_IMG_0353-1.jpg","https://images.adsttc.com/media/images/5f58/34e6/b357/6580/c200/035a/slideshow/00FI_IMG_0353-1.jpg","https://images.adsttc.com/media/images/5f58/34e6/b357/6580/c200/035a/slideshow/00FI_IMG_0353-1.jpg","https://images.adsttc.com/media/images/5f58/34e6/b357/6580/c200/035a/slideshow/00FI_IMG_0353-1.jpg"]
   },
   {
     title: "Beautiful Riad",
@@ -15,7 +14,7 @@ const cards = [
     country: "Morocco",
     category: "Riad",
     image:
-      "https://www.deedeeparis.com/blog/wp-content/uploads/2018/05/riad-marrakech.jpg",
+      ["https://www.deedeeparis.com/blog/wp-content/uploads/2018/05/riad-marrakech.jpg","https://www.deedeeparis.com/blog/wp-content/uploads/2018/05/riad-marrakech.jpg","https://www.deedeeparis.com/blog/wp-content/uploads/2018/05/riad-marrakech.jpg"]
   },
   {
     title: "Modern Villa",
@@ -24,7 +23,7 @@ const cards = [
     country: "Spain",
     category: "Villa",
     image:
-      "https://assets-news.housing.com/news/wp-content/uploads/2022/01/11172338/World%E2%80%99s-15-Most-Beautiful-Houses-That-Will-Leave-You-Awestruck-featured-shutterstock_1182743467-1200x700-compressed.jpg",
+      ["https://assets-news.housing.com/news/wp-content/uploads/2022/01/11172338/World%E2%80%99s-15-Most-Beautiful-Houses-That-Will-Leave-You-Awestruck-featured-shutterstock_1182743467-1200x700-compressed.jpg","https://assets-news.housing.com/news/wp-content/uploads/2022/01/11172338/World%E2%80%99s-15-Most-Beautiful-Houses-That-Will-Leave-You-Awestruck-featured-shutterstock_1182743467-1200x700-compressed.jpg"]
   },
   {
     title: "French Villa",
@@ -32,7 +31,7 @@ const cards = [
     price: "65",
     country: "France",
     category: "Villa",
-    image: "https://mygate.com/wp-content/uploads/2023/07/110.jpg",
+    image: ["https://mygate.com/wp-content/uploads/2023/07/110.jpg","https://mygate.com/wp-content/uploads/2023/07/110.jpg","https://mygate.com/wp-content/uploads/2023/07/110.jpg","https://mygate.com/wp-content/uploads/2023/07/110.jpg","https://mygate.com/wp-content/uploads/2023/07/110.jpg"]
   },
   {
     title: "House",
@@ -41,7 +40,7 @@ const cards = [
     country: "Spain",
     category: "House",
     image:
-      "https://www.newshub.co.nz/home/travel/2018/07/global-competition-reveals-world-s-most-beautiful-houses/_jcr_content/par/image.dynimg.full.q75.jpg/v1532489408970/0_CATERS_HGTV_ULTIMATE_HOUSE_HUNT_FINALS_01-Hawaii+Life-1120.jpg",
+      ["https://www.newshub.co.nz/home/travel/2018/07/global-competition-reveals-world-s-most-beautiful-houses/_jcr_content/par/image.dynimg.full.q75.jpg/v1532489408970/0_CATERS_HGTV_ULTIMATE_HOUSE_HUNT_FINALS_01-Hawaii+Life-1120.jpg","https://www.newshub.co.nz/home/travel/2018/07/global-competition-reveals-world-s-most-beautiful-houses/_jcr_content/par/image.dynimg.full.q75.jpg/v1532489408970/0_CATERS_HGTV_ULTIMATE_HOUSE_HUNT_FINALS_01-Hawaii+Life-1120.jpg","https://www.newshub.co.nz/home/travel/2018/07/global-competition-reveals-world-s-most-beautiful-houses/_jcr_content/par/image.dynimg.full.q75.jpg/v1532489408970/0_CATERS_HGTV_ULTIMATE_HOUSE_HUNT_FINALS_01-Hawaii+Life-1120.jpg"]
   },
   {
     title: "French Apartment",
@@ -50,7 +49,7 @@ const cards = [
     country: "France",
     category: "Apartment",
     image:
-      "https://netstorage-legit.akamaized.net/images/fd7e084d8493203a.jpg?",
+      ["https://netstorage-legit.akamaized.net/images/fd7e084d8493203a.jpg?","https://netstorage-legit.akamaized.net/images/fd7e084d8493203a.jpg?","https://netstorage-legit.akamaized.net/images/fd7e084d8493203a.jpg?","https://netstorage-legit.akamaized.net/images/fd7e084d8493203a.jpg?"]
   },
   {
     title: "Spanish House",
@@ -59,7 +58,7 @@ const cards = [
     country: "Spain",
     category: "House",
     image:
-      "https://www.homoq.com/wp-content/uploads/2017/07/top-10-most-beautiful-houses-in-the-world-720x400.jpg",
+      ["https://www.homoq.com/wp-content/uploads/2017/07/top-10-most-beautiful-houses-in-the-world-720x400.jpg","https://www.homoq.com/wp-content/uploads/2017/07/top-10-most-beautiful-houses-in-the-world-720x400.jpg","https://www.homoq.com/wp-content/uploads/2017/07/top-10-most-beautiful-houses-in-the-world-720x400.jpg"]
   },
   {
     title: "Moroccain Villa",
@@ -68,7 +67,7 @@ const cards = [
     country: "Morocco",
     category: "Villa",
     image:
-      "https://cdn.homedit.com/wp-content/uploads/2017/05/America-Most-Expensive-Bel-Air-Los-Angeles-Residence.jpg",
+      ["https://cdn.homedit.com/wp-content/uploads/2017/05/America-Most-Expensive-Bel-Air-Los-Angeles-Residence.jpg","https://cdn.homedit.com/wp-content/uploads/2017/05/America-Most-Expensive-Bel-Air-Los-Angeles-Residence.jpg"]
   },
   {
     title: "Riad in Morocco",
@@ -77,7 +76,7 @@ const cards = [
     country: "Morocco",
     category: "Riad",
     image:
-      "https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp",
+      ["https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp","https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp","https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp"]
   },
   {
     title: "Spanish House",
@@ -86,7 +85,7 @@ const cards = [
     country: "Spain",
     category: "House",
     image:
-      "https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp",
+      ["https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp","https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp","https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp","https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp"]
   },
 
   {
@@ -96,7 +95,7 @@ const cards = [
     country: "Spain",
     category: "Villa",
     image:
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/366226917.jpg",
+      ["https://www.croatialuxuryrent.com/storage/upload/60b/a84/9d9/ACtC-3dUUhnPukyvA_B6PwqK5wuvQSefQm0xRixxvut1pU3-DTccroA8pzNt6Yvi0UaPGM5YbXPt7YajBpUlEjDYd_g10GKPk_ueHlRlv6ujTvRbWnYdSxcW9wOLsWye-Nw7UVF1yoOOVCh6Wg7QFVRE6-vldw=w1358-h905-no.jpg","https://www.croatialuxuryrent.com/storage/upload/60b/a84/9d9/ACtC-3dUUhnPukyvA_B6PwqK5wuvQSefQm0xRixxvut1pU3-DTccroA8pzNt6Yvi0UaPGM5YbXPt7YajBpUlEjDYd_g10GKPk_ueHlRlv6ujTvRbWnYdSxcW9wOLsWye-Nw7UVF1yoOOVCh6Wg7QFVRE6-vldw=w1358-h905-no.jpg"]
   },
   {
     title: "Beautiful Riad",
@@ -105,7 +104,7 @@ const cards = [
     country: "France",
     category: "Riad",
     image:
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/359540284.jpg",
+      ["https://cf.bstatic.com/xdata/images/hotel/max1024x768/253902617.jpg?k=5eec943845a327e466a9470e439f9ed4dab9e8c8058d5e65eb4af9c6edeb2cf6&o=&hp=1","https://cf.bstatic.com/xdata/images/hotel/max1024x768/253902617.jpg?k=5eec943845a327e466a9470e439f9ed4dab9e8c8058d5e65eb4af9c6edeb2cf6&o=&hp=1","https://cf.bstatic.com/xdata/images/hotel/max1024x768/253902617.jpg?k=5eec943845a327e466a9470e439f9ed4dab9e8c8058d5e65eb4af9c6edeb2cf6&o=&hp=1"]
   },
   {
     title: "Modern House",
@@ -114,7 +113,7 @@ const cards = [
     country: "Morocco",
     category: "House",
     image:
-      "https://assets-news.housing.com/news/wp-content/uploads/2022/01/11172338/World%E2%80%99s-15-Most-Beautiful-Houses-That-Will-Leave-You-Awestruck-featured-shutterstock_1182743467-1200x700-compressed.jpg",
+      ["https://assets-news.housing.com/news/wp-content/uploads/2022/01/11172338/World%E2%80%99s-15-Most-Beautiful-Houses-That-Will-Leave-You-Awestruck-featured-shutterstock_1182743467-1200x700-compressed.jpg","https://assets-news.housing.com/news/wp-content/uploads/2022/01/11172338/World%E2%80%99s-15-Most-Beautiful-Houses-That-Will-Leave-You-Awestruck-featured-shutterstock_1182743467-1200x700-compressed.jpg"]
   },
   {
     title: "Moroccain Villa",
@@ -122,7 +121,7 @@ const cards = [
     price: "21",
     country: "Morocco",
     category: "Riad",
-    image: "https://mygate.com/wp-content/uploads/2023/07/110.jpg",
+    image: ["https://mygate.com/wp-content/uploads/2023/07/110.jpg","https://mygate.com/wp-content/uploads/2023/07/110.jpg","https://mygate.com/wp-content/uploads/2023/07/110.jpg","https://mygate.com/wp-content/uploads/2023/07/110.jpg","https://mygate.com/wp-content/uploads/2023/07/110.jpg","https://mygate.com/wp-content/uploads/2023/07/110.jpg"]
   },
   {
     title: "Hotel",
@@ -131,7 +130,7 @@ const cards = [
     country: "France",
     category: "Hotel",
     image:
-      "https://www.newshub.co.nz/home/travel/2018/07/global-competition-reveals-world-s-most-beautiful-houses/_jcr_content/par/image.dynimg.full.q75.jpg/v1532489408970/0_CATERS_HGTV_ULTIMATE_HOUSE_HUNT_FINALS_01-Hawaii+Life-1120.jpg",
+      ["https://www.newshub.co.nz/home/travel/2018/07/global-competition-reveals-world-s-most-beautiful-houses/_jcr_content/par/image.dynimg.full.q75.jpg/v1532489408970/0_CATERS_HGTV_ULTIMATE_HOUSE_HUNT_FINALS_01-Hawaii+Life-1120.jpg","https://www.newshub.co.nz/home/travel/2018/07/global-competition-reveals-world-s-most-beautiful-houses/_jcr_content/par/image.dynimg.full.q75.jpg/v1532489408970/0_CATERS_HGTV_ULTIMATE_HOUSE_HUNT_FINALS_01-Hawaii+Life-1120.jpg"]
   },
   {
     title: "Spanish Apartment",
@@ -140,7 +139,7 @@ const cards = [
     country: "Spain",
     category: "Apartment",
     image:
-      "https://netstorage-legit.akamaized.net/images/fd7e084d8493203a.jpg?",
+      ["https://netstorage-legit.akamaized.net/images/fd7e084d8493203a.jpg","https://netstorage-legit.akamaized.net/images/fd7e084d8493203a.jpg","https://netstorage-legit.akamaized.net/images/fd7e084d8493203a.jpg"]
   },
   {
     title: "French Apartment",
@@ -149,7 +148,7 @@ const cards = [
     country: "France",
     category: "Apartment",
     image:
-      "https://www.homoq.com/wp-content/uploads/2017/07/top-10-most-beautiful-houses-in-the-world-720x400.jpg",
+      ["https://www.homoq.com/wp-content/uploads/2017/07/top-10-most-beautiful-houses-in-the-world-720x400.jpg","https://www.homoq.com/wp-content/uploads/2017/07/top-10-most-beautiful-houses-in-the-world-720x400.jpg"]
   },
   {
     title: "French Hotel",
@@ -158,7 +157,7 @@ const cards = [
     country: "France",
     category: "Hotel",
     image:
-      "https://cdn.homedit.com/wp-content/uploads/2017/05/America-Most-Expensive-Bel-Air-Los-Angeles-Residence.jpg",
+      ["https://cdn.homedit.com/wp-content/uploads/2017/05/America-Most-Expensive-Bel-Air-Los-Angeles-Residence.jpg","https://cdn.homedit.com/wp-content/uploads/2017/05/America-Most-Expensive-Bel-Air-Los-Angeles-Residence.jpg"]
   },
   {
     title: "Riad in France",
@@ -167,7 +166,7 @@ const cards = [
     country: "France",
     category: "Riad",
     image:
-      "https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp",
+      ["https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp","https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp","https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp"]
   },
   {
     title: "Moroccain House",
@@ -176,7 +175,7 @@ const cards = [
     country: "Morocco",
     category: "House",
     image:
-      "https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp",
+      ["https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp","https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp"]
   },
 ];
 module.exports = {
