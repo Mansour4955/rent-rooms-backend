@@ -12,10 +12,10 @@ const {
  * @access public
  */
 
-// const query = JSON.parse(`{${!!minPrice ? {  price: { $gte: minPrice } } : {}}, 
-// ${!!minPrice ? {  price: { $gte: minPrice } } : {}}, 
-// ${!!minPrice ? {  price: { $gte: minPrice } } : {}}, 
-// ${!!minPrice ? {  price: { $gte: minPrice } } : {}}}`) 
+// const query = JSON.parse(`{${!!minPrice ? {  price: { $gte: minPrice } } : {}},
+// ${!!minPrice ? {  price: { $gte: minPrice } } : {}},
+// ${!!minPrice ? {  price: { $gte: minPrice } } : {}},
+// ${!!minPrice ? {  price: { $gte: minPrice } } : {}}}`)
 module.exports.getAllCards = asyncHandler(async (req, res) => {
   const { category, country, minPrice, maxPrice } = req.query;
   if (country && !category && !minPrice && !maxPrice) {
@@ -38,7 +38,17 @@ module.exports.getAllCards = asyncHandler(async (req, res) => {
   } else if (country && category && !minPrice && !maxPrice) {
     const cards = await Card.find({ country, category });
     res.status(200).json(cards);
-  } else if (country && minPrice && !maxPrice && !category) {
+  }
+/////////////////////////
+  else if (country && !category && minPrice && maxPrice) {
+    const cards = await Card.find({
+      country,
+      price: { $lte: maxPrice, $gte: minPrice },
+    });
+    res.status(200).json(cards);
+  }
+/////////////////////////////
+  else if (country && minPrice && !maxPrice && !category) {
     const cards = await Card.find({ country, price: { $gte: minPrice } });
     res.status(200).json(cards);
   } else if (country && maxPrice && !minPrice && !category) {
@@ -91,7 +101,11 @@ module.exports.getAllCards = asyncHandler(async (req, res) => {
  */
 module.exports.getCardById = asyncHandler(async (req, res) => {
   const card = await Card.findById(req.params.id);
-  res.status(200).json(card);
+  if (card) {
+    res.status(200).json(card);
+  } else {
+    res.status(404).json({ message: "Card Not Found" });
+  }
 });
 
 /**

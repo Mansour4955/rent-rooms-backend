@@ -1,7 +1,8 @@
-const { cards } = require("./data");
+const { cards, users } = require("./data");
 const { Card } = require("./models/Card");
 
 const connectToDB = require("./config/db");
+const { User } = require("./models/User");
 require("dotenv").config();
 
 connectToDB();
@@ -24,8 +25,20 @@ const deleteCards = async () => {
     process.exit(1);
   }
 };
+const importUsers = async () => {
+  try {
+    await User.insertMany(users);
+    console.log("users imported");
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+};
+
 if (process.argv[2] === "-import") {
   importCards();
 } else if (process.argv[2] === "-delete") {
   deleteCards();
+} else if (process.argv[2] === "import-users"){
+  importUsers()
 }

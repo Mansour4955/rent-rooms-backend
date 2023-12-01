@@ -177,7 +177,13 @@ const cards = [
     image:
       ["https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp","https://devvlsnxxkrq9.cloudfront.net/prod/assets/_950xAUTO_crop_center-center_none/1654105/Miram-House-Barnet-Header-Image_2022-11-10-102451_skhi.webp"]
   },
-];
+]; 
+const users = [{
+  email: 'Amine@gmail.com',
+  username: 'Amiine',
+  password: '123456'
+}]
 module.exports = {
   cards,
+  users
 };
