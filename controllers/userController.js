@@ -1,8 +1,9 @@
 const asyncHandler = require("express-async-handler");
 const {
   User,
-  validateCreateUser,
   validateUpdateUser,
+  validateRegisterUser,
+  validateLoginUser,
 } = require("../models/User");
 /**
  * @desc Get All Users
@@ -56,23 +57,53 @@ const updateUser = asyncHandler(async (req, res) => {
 });
 
 /**
- * @desc Create User
+ * @desc Register User
  * @Route /api/users
  * @method POST
  * @access private
  */
-const createUser = asyncHandler(async (req, res) => {
-  const { error } = validateCreateUser(req.body);
+const registerUser = asyncHandler(async (req, res) => {
+  const { error } = validateRegisterUser(req.body);
   if (error) {
     return res.status(400).json({ message: error.details[0].message });
   }
-  const user = new User({
+  // let
+  let user = await User.findOne({ email: req.body.email });
+  if (user) {
+    return res.status(400).json({ message: "this email already registered" });
+  }
+
+  user = new User({
     email: req.body.email,
     username: req.body.username,
     password: req.body.password,
   });
   const result = await user.save();
   res.status(201).json(result);
+});
+
+/**
+ * @desc Login User
+ * @Route /api/users
+ * @method POST
+ * @access private
+ */
+const loginUser = asyncHandler(async (req, res) => {
+  const { error } = validateLoginUser(req.body);
+  if (error) {
+    return res.status(400).json({ message: error.details[0].message });
+  }
+
+  const user = await User.findOne({ email: req.body.email });
+  if (!user) {
+    return res.status(400).json({ message: "invalid email" });
+  }
+  const isPasswordMatch = (await user.password) === req.body.password;
+  if (!isPasswordMatch) {
+    return res.status(400).json({ message: "invalid password" });
+  }
+  // const { password, ...other } = user 
+  res.status(200).json(user);
 });
 
 /**
@@ -95,6 +126,7 @@ module.exports = {
   getAllUsers,
   getUserById,
   updateUser,
-  createUser,
+  registerUser,
   deleteUser,
+  loginUser,
 };

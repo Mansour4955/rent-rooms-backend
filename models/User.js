@@ -40,7 +40,7 @@ const validateUpdateUser = (obj) => {
   });
   return schema.validate(obj);
 };
-const validateCreateUser = (obj) => {
+const validateRegisterUser = (obj) => {
   const schema = Joi.object({
     email: Joi.string().trim().min(7).email().required(),
     username: Joi.string().trim().min(6).max(20).required(),
@@ -48,8 +48,16 @@ const validateCreateUser = (obj) => {
   });
   return schema.validate(obj);
 };
+const validateLoginUser = (obj) => {
+  const schema = Joi.object({
+    email: Joi.string().trim().min(7).email().required(),
+    password: Joi.string().trim().min(6).max(20).required(),
+  });
+  return schema.validate(obj);
+};
 module.exports = {
   User,
-  validateCreateUser,
+  validateRegisterUser,
   validateUpdateUser,
+  validateLoginUser,
 };
