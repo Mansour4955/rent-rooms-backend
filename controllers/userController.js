@@ -1,4 +1,6 @@
 const asyncHandler = require("express-async-handler");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 const {
   User,
   validateUpdateUser,
@@ -72,6 +74,8 @@ const registerUser = asyncHandler(async (req, res) => {
   if (user) {
     return res.status(400).json({ message: "this email already registered" });
   }
+  const salt = await bcrypt.genSalt(10);
+  req.body.password = await bcrypt.hash(req.body.password, salt);
 
   user = new User({
     email: req.body.email,
@@ -79,7 +83,11 @@ const registerUser = asyncHandler(async (req, res) => {
     password: req.body.password,
   });
   const result = await user.save();
-  res.status(201).json(result);
+
+  const token = jwt.sign({id: user._id , isAdmin: user.isAdmin},process.env.JWT_SECRET_KEY);
+  const { password, ...other } = result._doc;
+
+  res.status(201).json({ ...other, token });
 });
 
 /**
@@ -98,12 +106,16 @@ const loginUser = asyncHandler(async (req, res) => {
   if (!user) {
     return res.status(400).json({ message: "invalid email" });
   }
-  const isPasswordMatch = (await user.password) === req.body.password;
+  const isPasswordMatch = await bcrypt.compare(
+    req.body.password,
+    user.password
+  );
   if (!isPasswordMatch) {
     return res.status(400).json({ message: "invalid password" });
   }
-  // const { password, ...other } = user 
-  res.status(200).json(user);
+  const token = jwt.sign({id: user._id , isAdmin: user.isAdmin},process.env.JWT_SECRET_KEY);
+  const { password, ...other } = user._doc;
+  res.status(200).json({ ...other, token });
 });
 
 /**

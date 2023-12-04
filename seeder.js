@@ -34,11 +34,22 @@ const importUsers = async () => {
     process.exit(1);
   }
 };
+const deleteUsers = async () => {
+  try {
+    await User.deleteMany();
+    console.log("Users deleted!");
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+};
 
 if (process.argv[2] === "-import") {
   importCards();
 } else if (process.argv[2] === "-delete") {
   deleteCards();
-} else if (process.argv[2] === "import-users"){
-  importUsers()
+} else if (process.argv[2] === "import-users") {
+  importUsers();
+} else if (process.argv[2] === "delete-users") {
+  deleteUsers();
 }
